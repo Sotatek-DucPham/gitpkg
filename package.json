@@ -1,0 +1,49 @@
+{
+  "name": "apache-ignite-client",
+  "version": "1.1.0",
+  "description": "NodeJS Client for Apache Ignite",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "examples"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apache/ignite/tree/master/modules/platforms/nodejs"
+  },
+  "keywords": [
+    "apache",
+    "ignite",
+    "client"
+  ],
+  "author": "",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "decimal.js": "10.2.1",
+    "long": "4.0.0"
+  },
+  "scripts": {
+    "test": "jasmine",
+    "test:examples": "node ./spec/ExamplesExecutor.js Examples",
+    "test:auth_example": "node ./spec/ExamplesExecutor.js AuthExample",
+    "test:partition_awareness": "APACHE_IGNITE_CLIENT_PARTITION_AWARENESS=true node ./spec/PartitionAwarenessExecutor.js",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "jasmine": "3.6.2",
+    "jasmine-expect": "5.0.0",
+    "jasmine-reporters": "2.5.0",
+    "ps-tree": "1.2.0",
+    "process-exists": "4.0.0",
+    "glob": "7.1.6",
+    "@types/node": "14.14.2",
+    "@types/long": "4.0.1",
+    "typescript": "4.0.3",
+    "source-map-support": "^0.5.19",
+    "ts-node": "9.0.0"
+  }
+}
